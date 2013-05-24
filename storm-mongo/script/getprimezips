@@ -1,0 +1,8 @@
+#!/bin/bash
+
+OUTPUT_DIR=../primes
+
+for i in {1..50} 
+do 
+  wget -P $OUTPUT_DIR "http://primes.utm.edu/lists/small/millions/primes$i.zip"
+done

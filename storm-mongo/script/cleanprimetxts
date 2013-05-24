@@ -1,0 +1,17 @@
+#!/bin/bash
+
+PRIMES_DIR=../primes
+
+cd $PRIMES_DIR
+for i in $( ls *.zip )
+do
+  unzip $i
+done
+
+#get rid of the headers
+for i in $( ls *.txt )
+do
+  tail -n +3 $i > $i.clean
+  rm $i
+done
+
